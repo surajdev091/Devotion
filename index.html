@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love Question</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+text-align:center;
+}
+
+.container{
+padding:20px;
+}
+
+h1{
+font-size:28px;
+color:#fff;
+margin-bottom:30px;
+}
+
+.buttons{
+position:relative;
+}
+
+button{
+padding:12px 25px;
+font-size:18px;
+border:none;
+border-radius:8px;
+margin:10px;
+cursor:pointer;
+}
+
+#yes{
+background:#28a745;
+color:white;
+}
+
+#no{
+background:#dc3545;
+color:white;
+position:absolute;
+}
+
+.love-img{
+display:none;
+margin-top:20px;
+max-width:100%;
+height:auto;
+border-radius:10px;
+}
+
+@media(max-width:600px){
+
+h1{
+font-size:22px;
+}
+
+button{
+font-size:16px;
+padding:10px 20px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Do You Love Me? ❤️</h1>
+
+<div class="buttons">
+    
+<button id="yes" onclick="yesClick()">Yes</button>
+
+<button id="no" onmouseover="moveButton()" ontouchstart="moveButton()">No</button>
+</div>
+
+<!-- Love Photo -->
+<img max-width="100%" height="auto" id="lovePhoto" class="love-img" src="https://tse4.mm.bing.net/th/id/OIP.IeiOHxFWiGsX8SAnoQCYvQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
+
+</div>
+
+<script>
+
+function yesClick(){
+document.getElementById("lovePhoto").style.display="block";
+alert("I Love You Too ❤️");
+}
+
+function moveButton(){
+
+let btn = document.getElementById("no");
+
+let x = Math.random()*200;
+let y = Math.random()*200;
+
+btn.style.left = x + "px";
+btn.style.top = y + "px";
+
+}
+
+</script>
+
+</body>
+</html>
